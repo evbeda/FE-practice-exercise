@@ -1,0 +1,109 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "eventName": "Test Event 1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
+      "imageUrl": "https://place-hold.it/200x200",
+      "startDatetime": "2022-10-15T13:45:00Z",
+      "endDateTime": "2022-10-15T16:00:00Z",
+      "venue": "123 Fake St.",
+      "followers": 156,
+      "tickets": [
+        {
+          "quantity": 100,
+          "price": 14.56,
+          "name": "General Ticket",
+          "fee_type": "fixed",
+          "fee": "1.50"
+        },
+        {
+          "quantity": 50,
+          "price": 35.0,
+          "name": "VIP Ticket",
+          "fee_type": "percent",
+          "fee": "5"
+        },
+        {
+          "quantity": 5,
+          "price": 35.0,
+          "name": "VIP Ticket",
+          "fee_type": "none"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "eventName": "Test Event 2",
+      "description": "C adipiscing elit. Curabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
+      "imageUrl": "https://place-hold.it/200x200",
+      "startDatetime": "2022-11-15T13:45:00Z",
+      "endDateTime": "2022-11-15T16:00:00Z",
+      "venue": "12345 Fake St.",
+      "followers": 14567,
+      "tickets": [
+        {
+          "quantity": 18,
+          "price": 14.56,
+          "name": "General Ticket",
+          "fee_type": "fixed",
+          "fee": "1.50"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "eventName": "Test Event 3",
+      "description": "urabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
+      "imageUrl": "https://place-hold.it/200x200",
+      "startDatetime": "2022-11-17T13:45:00Z",
+      "endDateTime": "2022-11-17T16:00:00Z",
+      "venue": "123456 Fake St.",
+      "followers": 6,
+      "tickets": [
+        {
+          "quantity": 4,
+          "price": 0,
+          "name": "Free Ticket"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "eventName": "Test Event 4",
+      "description": "Amet, consectetur adipiscing elit. Curabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
+      "imageUrl": "https://place-hold.it/200x200",
+      "startDatetime": "2022-10-15T13:45:00Z",
+      "endDateTime": "2022-10-15T16:00:00Z",
+      "venue": "123sds Fake St.",
+      "followers": 1566,
+      "tickets": [
+        {
+          "quantity": 100,
+          "price": 14.56,
+          "name": "General Ticket",
+          "fee_type": "fixed",
+          "fee": "1.50"
+        },
+        {
+          "quantity": 50,
+          "price": 35.0,
+          "name": "VIP Ticket",
+          "fee_type": "percent",
+          "fee": "5"
+        },
+        {
+          "quantity": 5,
+          "price": 35.0,
+          "name": "VIP Ticket",
+          "fee_type": "none"
+        },
+        {
+          "quantity": 5,
+          "price": 0.0,
+          "name": "Free Ticket"
+        }
+      ]
+    }
+  ]
+}
