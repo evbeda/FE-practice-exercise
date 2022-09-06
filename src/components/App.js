@@ -13,7 +13,7 @@ const App = (props) => {
       mockApi(data)
     })
     .catch(e =>{
-      console.log(e)
+      console.log("error", e)
     })
     
   },[])
