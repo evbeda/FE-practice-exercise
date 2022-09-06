@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import getEventData from "../api/eventService";
 import "../styles.css";
+// import { CardContainer } from "./CardContainer";
+import { Modal } from "./Modal";
 
 const App = (props) => {
 
-  const { mockedApi, mockApi } = props
+  const { mockedApi, mockApi } = props;
+  const [ showModal, setShowModal ] = useState(false);
 
   useEffect(()=>{
     getEventData()
@@ -35,6 +38,8 @@ const App = (props) => {
     </ul>
     
       </p>
+      <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button>
+      <Modal displayModal={showModal} setShowModal={setShowModal}/>
     </div>
   );
 };
