@@ -1,0 +1,18 @@
+.individual-card {
+    padding: 1%;
+    margin: auto;
+
+
+}
+
+.image {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 1px;
+}
+
+.description {
+    background-color: white;
+    padding-bottom: 10px;
+    border-color: gray;
+}
