@@ -1,0 +1,37 @@
+@import "../../styles.css";
+
+.containerHeader{
+    position: relative;
+}
+
+.home-header-h1{
+    width: 30%;
+    height: 30%;
+    z-index: 10;
+    position: fixed;
+}
+
+@media screen and (min-width:1000px) {
+    .home-header-h1{
+        margin:80px 0 0 50px;
+    }
+  }
+
+.imagesHeader{
+    height: auto;
+    width: 100vw;
+}
+
+.eventsContainerTitle{
+    position: relative;
+    display: flex;
+    margin: 10px 0 0 50px;
+}
+
+.titleListEvents{
+    font-size: var(--title-font-size);
+}
+
+.titleOtherColor{
+    color:var(--accent-color)
+}
