@@ -1,0 +1,190 @@
+.simple-carousel__slide {
+    min-width: 90%;
+    scroll-snap-align: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.eds-g-cell {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.eds-g-cell {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.eds-g-cell-1-1 {
+    width: 100%;
+}
+
+.eds-g-cell-1-1 {
+    width: 100%;
+}
+
+.eds-event-card--consumer {
+    cursor: default;
+}
+
+.feed-events-bucket .feed__card-cell .eds-card, .feed-events-bucket .feed__card-cell .eds-event-card--consumer {
+    height: 100%;
+}
+
+.eds-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+
+.eds-card {
+    background: #fff;
+    background: var(--eds-background,#fff);
+}
+
+.eds-card--neutral {
+    background-color: transparent;
+    -webkit-transition: background-color .24s cubic-bezier(.4,0,.3,1),-webkit-box-shadow .24s cubic-bezier(.4,0,.3,1);
+    transition: background-color .24s cubic-bezier(.4,0,.3,1),-webkit-box-shadow .24s cubic-bezier(.4,0,.3,1);
+    transition: box-shadow .24s cubic-bezier(.4,0,.3,1),background-color .24s cubic-bezier(.4,0,.3,1);
+    transition: box-shadow .24s cubic-bezier(.4,0,.3,1),background-color .24s cubic-bezier(.4,0,.3,1),-webkit-box-shadow .24s cubic-bezier(.4,0,.3,1);
+}
+
+.feed-events-bucket .feed__card-cell .eds-card, .feed-events-bucket .feed__card-cell .eds-event-card--consumer {
+    height: 100%;
+}
+
+.eds-event-card-content {
+    border-radius: 4px;
+    width: 100%;
+}
+
+.eds-event-card-content.eds-event-card-content--grid {
+    position: relative;
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard.eds-event-card-content {
+    overflow: visible;
+}
+
+
+
+/* CARD CONTENT CSS */
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content-container {
+    display: block;
+    overflow: visible;
+    position: relative;
+    /* padding: 24px; */
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content-container--consumer {
+    padding: 24px 16px;
+}
+
+/* @media (max-width: 659px) */
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content-container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content {
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    /* -ms-flex-direction: row; */
+    flex-direction: row;
+    -webkit-box-pack: start;
+    /* -ms-flex-pack: start; */
+    justify-content: flex-start;
+    -webkit-box-flex: 1;
+    /* -ms-flex: 1 0 auto; */
+    flex: 1 0 auto;
+}
+
+.eds-event-card-content__content__principal {
+    word-break: break-word;
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content__principal {
+    -webkit-box-flex: 1;
+    /* -ms-flex: 1 1 auto; */
+    flex: 1 1 auto;
+}
+
+/* @media (max-width: 659px) */
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__content__principal {
+    padding: 0 16px;
+}
+
+/* nombre evento y fecha container */
+a {
+    background-color: transparent;
+}
+
+.eds-link, a {
+    text-decoration: none;
+    color: #3659e3;
+    color: var(--eds-control,#3659e3);
+}
+.eds-event-card-content__action-link {
+    display: block;
+    outline: none;
+    width: 100%;
+}
+h3 {
+    display: block;
+    /* font-size: 1.17em; */
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.eds-text-bl, .eds-text-bl--fixed {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    letter-spacing: .25px;
+    margin-right: -.25px;
+    font-weight: 600;
+}
+.eds-text-weight--heavy, .eds-text-weight--semibold {
+    font-weight: 600;
+}
+
+body .eds-text-color--ui-800 {
+    color: #39364f;
+    color: var(--eds-ui-800,var(--eds-ui-800,#39364f));
+}
+
+.eds-l-pad-bot-1 {
+    padding-bottom: 4px;
+}
+
+.eds-l-pad-top-2 {
+    padding-top: 8px;
+}
+
+.eds-text-bm, .eds-text-bm--fixed {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+.eds-text-weight--heavy, .eds-text-weight--semibold {
+    font-weight: 600;
+}
+
+body .eds-text-color--primary-brand {
+    color: #d1410c;
+    /* color: var(--eds-primary-brand,var(--eds-primary-brand,#d1410c)); */
+}

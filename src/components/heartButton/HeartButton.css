@@ -1,0 +1,164 @@
+/* fisrt div container  */
+
+.eds-event-card-content__actions-container {
+  /* opacity: 1;
+  -webkit-transition: opacity .24s cubic-bezier(0,0,.35,1); */
+  transition: opacity .24s cubic-bezier(0,0,.35,1);
+}
+
+.eds-event-card-content__actions-container.eds-event-card-content__actions-container--always-visible {
+  opacity: 1!important;
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__actions-container {
+  /* top: -24px; */
+  position: absolute;
+  /* right: 8px; */
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__actions-container--consumer {
+  top: -24px;
+}
+
+/* @media (max-width: 659px) */
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__actions-container {
+    right: 8px;
+}
+
+/* fisrt span */
+.eds-l-pad-all-1 {
+  padding: 4px;
+}
+
+/* second span */
+.eds-icon-button {
+  display: inline-block;
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__actions-container .eds-icon-button {
+  background-color: #fff;
+  background-color: var(--eds-background,#fff);
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__actions-icon--primary .eds-icon-button {
+  border-radius: 50%;
+  border: 1px solid #dbdae3;
+  border: 1px solid var(--eds-ui-300,#dbdae3);
+  padding: 1px;
+}
+
+/* button */
+button {
+  appearance: auto;
+  writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: buttonface;
+  margin: 0em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+}
+
+button, input, select, textarea {
+  /* color: inherit; */
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+.eds-btn--anchor, .eds-btn--anchor--inverse, .eds-btn--anchor--neutral, .eds-btn--none {
+  background: none;
+  border: none;
+  /* padding: 0; */
+  text-align: left;
+  /* color: #39364f;
+  color: var(--eds-ui-800,#39364f);
+  fill: #39364f;
+  fill: var(--eds-ui-800,#39364f); */
+}
+
+.eds-icon-button--neutral button, .eds-icon-button button {
+  color: #4b4d63;
+  color: var(--eds-ui-700,#4b4d63);
+  fill: #4b4d63;
+  fill: var(--eds-ui-700,#4b4d63);
+}
+
+.eds-icon-button button {
+  border-radius: 40px;
+  height: 40px;
+  padding: 8px;
+  /* -webkit-transition: all .4s cubic-bezier(.4,0,.3,1); */
+  transition: all .4s cubic-bezier(.4,0,.3,1);
+  width: 40px;
+}
+
+/* i tag */
+
+i {
+  font-style: italic;
+}
+
+.eds-brand--small, .eds-icon--small {
+  width: 24px;
+  height: 24px;
+  /* -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: initial; */
+  box-sizing: initial;
+}
+
+.eds-vector-image {
+  /* display: inline-block; */
+  margin: 0 auto;
+  vertical-align: middle;
+  background-size: contain;
+  line-height: 0;
+}
+.eds-vector-image--block {
+  display: block;
+}
+
+/* svg  tag  */
+
+/* svg:not(:root) {
+  overflow: hidden;
+} */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+.eds-brand--small svg, .eds-icon--small svg {
+  width: 24px;
+  height: 24px;
+}
+
+.eds-is-hidden-accessible {
+  position: absolute;
+  left: -999999px;
+}
