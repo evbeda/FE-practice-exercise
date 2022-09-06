@@ -5,7 +5,6 @@ import { PurchaseSection } from "./PurchaseSection";
 
 export function Modal({displayModal, setShowModal}) {// display, eventData
 
-   
 
     const eventData = {
         "id": 1,

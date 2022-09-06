@@ -1,8 +1,10 @@
 import React from "react";
-import "./Card.css"
+import "./Card.css";
+import { formatTime } from "../utils/FormatTime";
 
 export const Card = (props) => {
     const {eventName, imageUrl, startDatetime, endDateTime, venue, followers} = props
+    const dateFormated = formatTime(startDatetime)
     return (
         <div className="individual-card">
             <div className="image">
@@ -10,7 +12,7 @@ export const Card = (props) => {
             </div>
             <div className="description">
                 <div className="event-name">{eventName}</div>
-                <div className="time">{startDatetime}</div>
+                <div className="time">{dateFormated}</div>
                 <div className="venue">{venue}</div>
                 <div className="followers">{followers} followers</div>
             </div>
