@@ -1,4 +1,23 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --primary-color: #ffffff;
+  --font-size: 1.1rem;
+  --title-font-size: 1.5rem;
+  --secondary-color: #eeedf2;
+  --accent-color: #f05537;
+  --dark-accent-color: #b0380c;
+  --primary-text-color: #1e0a3c;
+  --secondary-text-color: #6f7287;
+  --tertiary-text-color: #ffffff;
+  --alert-message-hidden: rgba(30, 10, 60, 0);
+  --alert-message-visible: rgba(30, 10, 60, 0.9);
+  --element-height: 2.3rem;
+  --element-border-radius: 4px;
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: var(--font-family);
   text-align: center;
 }
+
+

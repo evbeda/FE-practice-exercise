@@ -1,4 +1,3 @@
-import React from "react";
 import {getAllEvents} from "../../action/index"
 import { connect } from "react-redux";
 import {Container} from "./Container";
