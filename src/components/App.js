@@ -3,6 +3,8 @@ import getEventData from "../api/eventService";
 import "../styles.css";
 // import { CardContainer } from "./CardContainer";
 import { Modal } from "./Modal";
+import { OrderSummaryContainerConnected } from "./orderSummaryContainer/OrderSummaryContainerConnected";
+
 
 const App = (props) => {
 
@@ -40,6 +42,7 @@ const App = (props) => {
       </p>
       <button id="myBtn" onClick={()=>setShowModal(true)}>Open Modal</button>
       <Modal displayModal={showModal} setShowModal={setShowModal}/>
+      <OrderSummaryContainerConnected/>
     </div>
   );
 };
