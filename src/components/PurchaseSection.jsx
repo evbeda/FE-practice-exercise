@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import { Ticket } from "./Ticket";
+import { TicketConnected } from "./TicketConnected";
 
 export function PurchaseSection() {
 
@@ -55,7 +55,7 @@ export function PurchaseSection() {
             <h3>{props.eventName}</h3>
             <p>{props.startDatetime} - {props.endDateTime}</p>
             <hr/>
-            {ticketSelection.map(t => <Ticket {...ticketSelection}/>)}
+            {ticketSelection.map(t => <TicketConnected {...t}/>)}
             <div>
                 <p>
                     Powered by Eventbrite
