@@ -1,8 +1,7 @@
 import React from "react";
 import "../styles.css";
-
 import ContainerConected from './Container/ContainerConected.jsx';
-
+import ModalConected from "./Modal/ModalConnected";
 const evntoPrueba = {
   "id": 1,
   "eventName": "Test Event 1",
@@ -41,6 +40,7 @@ const App = () => {
   return (
     <div className="App">
       <ContainerConected/>
+      <ModalConected />
     </div>
   );
 };

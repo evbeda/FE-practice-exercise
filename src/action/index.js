@@ -1,5 +1,6 @@
 export const AllEvents = { type: "@getEvents" };
 export const actionDeleteTodo = { type: "@removeAll" };
+export const updateQuantity = { type: "@updateQuantity"}
 
 const getEvents = async() =>{
     const response = await fetch("http://localhost:3001/events", {
@@ -13,6 +14,7 @@ const getEvents = async() =>{
       });
 
     return response.json(); // parses JSON response into native JavaScript objects
+
 }
 
 export const getAllEvents = () => async (dispatch) => {
@@ -24,4 +26,8 @@ export const deleteAllToDo = () => (dispatch, getState) =>{
     return dispatch(actionDeleteTodo)
 }
 
+export const changeQuantityTicket = (eventId, ticketsInfo) => (dispatch) => {
+  updateQuantity.payload = [eventId, ...ticketsInfo]
+  return dispatch(updateQuantity)
+}
 
