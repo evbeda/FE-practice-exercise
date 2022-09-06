@@ -1,24 +1,17 @@
 import React from "react";
 
-export function Ticket() {
+export function Ticket(props) {
 
-    const props ={
-        "id": 1,
-        "quantity": 100,
-        "price": 14.56,
-        "name": "General Ticket",
-        "fee_type": "fixed",
-        "fee": "1.50",
-        "purchase": 0
-    }
+    const {name, price, fee, ticketInfo} = props
 
-    const {name, price, fee} = props
+    console.log(!!ticketInfo);
+    if (ticketInfo) {console.log(ticketInfo)};
 
     return (
         <div>
             <p>Name: {name}</p>
             <p>Price: {price}</p>
-            <p>Fee: {fee}</p>
+            {props.fee && <p>Fee: {fee}</p>}
             <p>
             <label for="card">
                 <span>Amount:</span>
