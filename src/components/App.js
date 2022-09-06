@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import getEventData from "../api/eventService";
 import "../styles.css";
 
-const App = () => {
+const App = (props) => {
+
+  const { mockedApi, mockApi } = props
+
+  useEffect(()=>{
+    getEventData()
+    .then(response => {
+      const data = response.data
+      mockApi(data)
+    })
+    .catch(e =>{
+      console.log(e)
+    })
+    
+  },[])
+
   return (
     <div className="App">
       <h1>Hi y'all!</h1>
