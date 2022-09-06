@@ -1,21 +1,21 @@
 @import "../../styles.css";
 
 .containerHeader{
-    position: relative;
+    position:relative;
 }
 
 .home-header-h1{
     width: 30%;
     height: 30%;
-    z-index: 10;
-    position: fixed;
+    position: absolute;
 }
-
 @media screen and (min-width:1000px) {
     .home-header-h1{
-        margin:80px 0 0 50px;
+        top:100px;
+        left: 150px;
     }
-  }
+    
+}
 
 .imagesHeader{
     height: auto;
@@ -23,9 +23,9 @@
 }
 
 .eventsContainerTitle{
-    position: relative;
     display: flex;
     margin: 10px 0 0 50px;
+    position: relative;
 }
 
 .titleListEvents{
@@ -35,3 +35,18 @@
 .titleOtherColor{
     color:var(--accent-color)
 }
+
+.eventsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 0 0 15px;
+    width: 100%;
+}
+.eventsContainer > article {
+    box-shadow: 10px 10px 62px -8px rgba(166,166,166,1);
+    margin: 10px;
+    padding: 30px;
+}
+
