@@ -1,9 +1,9 @@
-export const reducerEvent = (state = [], action) => {
+export const reducerEvent = (state = {modal:{}, events:[]}, action) => {
     switch (action.type) {
       case "@createMoskApi":
-        return action.payload
+        const newState = {...state, events:action.payload}
+        return newState
 
-     
     default:
         return state;
     }
