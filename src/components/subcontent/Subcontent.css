@@ -1,0 +1,132 @@
+/* fist div */
+div {
+  display: block;
+}
+body, dd, div, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* second div DIRECCION 
+eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1 
+*/
+.eds-l-mar-top-1 {
+  margin-top: 4px;
+}
+
+/* .eds-date-picker .CalendarMonth_caption strong, .eds-date-picker .DayPicker_weekHeader_ul small, .eds-text-bl, .eds-text-bl--fixed, .eds-text-bm, .eds-text-bs, .eds-text-bs--fixed, .eds-text-hl, .eds-text-hm, .eds-text-hs, .eds-text-hs--fixed {
+  text-rendering: optimizeLegibility;
+} */
+
+.eds-text-bl, .eds-text-bl--fixed, .eds-text-bm, .eds-text-bm--fixed, .eds-text-bs, .eds-text-bs--fixed, .eds-text-hl, .eds-text-hl--fixed, .eds-text-hm, .eds-text-hm--fixed, .eds-text-hs, .eds-text-hs--fixed, .eds-text-hxl, .eds-text-hxl--fixed {
+  text-rendering: optimizeLegibility;
+}
+.eds-text-bm, .eds-text-bm--fixed {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+body .eds-text-color--ui-600 {
+  color: #6f7287;
+  color: var(--eds-ui-600,var(--eds-ui-600,#6f7287));
+}
+
+/* TERCER DIV direecino */
+.card-text--truncated__one, .card-text--truncated__three, .card-text--truncated__two {
+  position: relative;
+  display: block;
+  display: -webkit-box;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* @supports (-webkit-line-clamp:2) */
+.card-text--truncated__one, .card-text--truncated__three, .card-text--truncated__two {
+    max-height: unset!important;
+    -webkit-box-orient: vertical;
+}
+
+/* @supports (-webkit-line-clamp:2) */
+.eds-event-card-content__sub-content .card-text--truncated__one {
+    -webkit-line-clamp: 1;
+}
+
+/*  PRECIO */
+
+.eds-l-mar-top-1 {
+  margin-top: 4px;
+}
+
+.eds-text-bm, .eds-text-bm--fixed {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+body .eds-text-color--ui-600 {
+  color: #6f7287;
+  color: var(--eds-ui-600,var(--eds-ui-600,#6f7287));
+}
+
+/* FOLLOWER Y ORGANIZERS */
+
+body .eds-text-color--ui-600 {
+  color: #6f7287;
+  color: var(--eds-ui-600,var(--eds-ui-600,#6f7287));
+}
+
+/* second div organizer followers */
+.eds-text-weight--heavy, .eds-text-weight--semibold {
+  font-weight: 600;
+}
+body .eds-text-color--ui-800 {
+  color: #39364f;
+  color: var(--eds-ui-800,var(--eds-ui-800,#39364f));
+}
+
+.eds-event-card-content__sub-content .eds-event-card__sub-content--organizer, .eds-event-card-content__sub-content .eds-event-card__sub-content--signal {
+  padding-top: 4px;
+}
+
+/* organizers */
+.card-text--truncated__one, .card-text--truncated__three, .card-text--truncated__two {
+  position: relative;
+  /* display: block; */
+  display: -webkit-box;
+  margin: 0 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* @supports (-webkit-line-clamp:2) */
+.card-text--truncated__one, .card-text--truncated__three, .card-text--truncated__two {
+    max-height: unset!important;
+    -webkit-box-orient: vertical;
+}
+
+.eds-text-weight--heavy, .eds-text-weight--semibold {
+  font-weight: 600;
+}
+
+body .eds-text-color--ui-800 {
+  color: #39364f;
+  color: var(--eds-ui-800,var(--eds-ui-800,#39364f));
+}
+
+.eds-event-card-content__sub-content .eds-event-card__sub-content--organizer, .eds-event-card-content__sub-content .eds-event-card__sub-content--signal {
+  padding-top: 4px;
+}
+
+/* @supports (-webkit-line-clamp:2) */
+.eds-event-card-content__sub-content .card-text--truncated__two {
+    -webkit-line-clamp: 2;
+}
+
+/* span de espacio */
+.eds-l-pad-hor-1 {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+

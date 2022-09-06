@@ -1,0 +1,102 @@
+.eds-event-card-content__image-container {
+    position: relative;
+    overflow: visible;
+}
+
+.eds-event-card-content--fixed .eds-event-card-content__image-container {
+    -webkit-box-flex: 0;
+    /* -ms-flex: 0 0 auto; */
+    flex: 0 0 auto;
+}
+
+.eds-event-card-content--grid.eds-event-card-content--standard .eds-event-card-content__image-container {
+    display: block;
+}
+a {
+    background-color: transparent;
+}
+
+.eds-link, a {
+    text-decoration: none;
+    color: #3659e3;
+    /* color: var(--eds-control,#3659e3); */
+}
+.eds-event-card-content__action-link {
+    display: block;
+    outline: none;
+    width: 100%;
+}
+
+.eds-event-card-content__image-wrapper {
+    position: relative;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.eds-event-card-content__image-content {
+    /* border-radius: 6px; */
+    position: relative;
+    overflow: hidden;
+    /* -webkit-transition: border-radius .24s cubic-bezier(.4,0,.3,1); */
+    /* transition: border-radius .24s cubic-bezier(.4,0,.3,1); */
+}
+
+
+.eds-event-card-content__image-content--sharp-corners {
+    border-radius: 0;
+    -webkit-transition: none;
+    transition: none;
+}
+
+.eds-event-card-content--fixed .eds-event-card-content__image-content {
+    width: 100%;
+    padding-top: 50%;
+}
+
+.eds-event-card-content__image-placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+element.style {
+    background-color: rgb(188, 160, 77);
+}
+
+img {
+    border: 0;
+}
+
+/* .eds-event-card-content__image {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    
+    transform: translateX(-50%) translateY(-50%);
+    max-height: 100%;
+    width: 100%;
+} */
+
+.eds-event-card-content__image-wrapper--sharp-corners:after {
+    border-radius: 0;
+}
+
+/* .eds-event-card-content__image-wrapper:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 4px;
+    border: 1px solid #dbdae3;
+    border: 1px solid var(--eds-ui-300,#dbdae3);
+    -webkit-transition: border-radius .24s cubic-bezier(.4,0,.3,1),border .24s cubic-bezier(.4,0,.3,1);
+    transition: border-radius .24s cubic-bezier(.4,0,.3,1),border .24s cubic-bezier(.4,0,.3,1);
+} */

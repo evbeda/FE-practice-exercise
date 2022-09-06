@@ -1,0 +1,22 @@
+.eds-vector-image {
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  background-size: contain;
+  line-height: 0;
+}
+.eds-brand--xsmall, .eds-icon--xsmall {
+  width: 16px;
+  height: 16px;
+  /* -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: initial; */
+  box-sizing: initial;
+}
+
+.eds-event-card-content__content__principal {
+  word-break: break-word;
+}
+i {
+  font-style: italic;
+}
