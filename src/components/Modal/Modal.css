@@ -39,10 +39,10 @@ dialog{
 }
 
 #close-modal{
-    background-color: rgba(205, 202, 210, 0.287);
+    background-color: rgba(234, 232, 238, 0.358);
     border-radius: 50px;
     font-size: xx-large;
-    color: rgb(114, 111, 111)
+    color: #4b4d63
 }
 
 #close-modal:hover{
@@ -66,13 +66,16 @@ h1{
     padding-bottom: 1rem;
 }
 
-p{
+#event-name-modal{
     margin: 1rem;
+    font-size: x-large;
 }
 
-#fee-icon{
-    margin: 0.2rem;
+#event-date-modal{
+    font-size: medium;
+    color: #888b9c;
 }
+
 
 
 

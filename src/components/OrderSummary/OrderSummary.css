@@ -31,7 +31,16 @@ h4{
 }
 
 .info-order{
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #47445c
+}
+
+
+p, .total-order{
+    margin: 1rem;
+}
+
+#fee-icon{
+    margin: 0.2rem;
 }
 

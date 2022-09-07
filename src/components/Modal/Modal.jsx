@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { FormLanguage } from "../Forms/FormLanguage";
 import { OrderSummary } from "../OrderSummary/OrderSummary";
 import { FormTickets} from "../Forms/FormTickets";
 import "./Modal.css"
+import { formatedDatetime } from "../../utils/utils"
 
 
 export function Modal(props){
@@ -38,8 +38,8 @@ export function Modal(props){
         <dialog open={showModal} id="modal">
           <div className="container-modal">
           <div className="col-modal" id="form-section">
-                  <h1>{eventsToSell ? eventsToSell.eventName.toUpperCase() : ""}</h1>
-                  <p>{eventsToSell ? eventsToSell.startDatetime : ""}</p>
+                  <h1 id="event-name-modal">{eventsToSell ? eventsToSell.eventName.toUpperCase() : ""}</h1>
+                  <p id="event-date-modal">{eventsToSell ? formatedDatetime(eventsToSell.startDatetime) : ""}</p>
                   <FormTickets
                   eventId={eventsToSell ? eventsToSell.id : ""}
                   tickets={eventsToSell ? eventsToSell.tickets : []}
