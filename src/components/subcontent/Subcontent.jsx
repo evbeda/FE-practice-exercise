@@ -1,21 +1,22 @@
 import React from "react";
 import { FollowersIcon } from "../followerIcon/FollowersIcon";
 import './Subcontent.css'
+import { SoldButton } from "./soldOut";
 
 const priceInfo = (tickets) => {
   return `A partir de $ ${minimumPrice(tickets)}`
 }
 
 const minimumPrice = (tickets) => {
-  let chepeastTocket = tickets.reduce(
+  let chepeastTicket = tickets.reduce(
     (previus, current) => {
       return (current.price > previus.price
         && current.quantity > 0) ? current : previus
     })
-  return chepeastTocket.price
+  return chepeastTicket.price
 }
 
-export const Subcontent = ({tickets, venue, organizer, followers}) => {
+export const Subcontent = ({tickets, venue, organizer, followers, thereAreTickets}) => {
   return (
 
     <div className="eds-event-card-content__sub-content">
@@ -27,7 +28,7 @@ export const Subcontent = ({tickets, venue, organizer, followers}) => {
 
       {/*  PRECIO  */}
       <div className="eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1">
-        {priceInfo(tickets)}
+        {thereAreTickets? priceInfo(tickets):<SoldButton/>}
       </div>
 
       <div className="eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1">

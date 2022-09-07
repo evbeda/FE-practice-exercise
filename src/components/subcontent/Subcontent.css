@@ -130,3 +130,16 @@ body .eds-text-color--ui-800 {
   padding-right: 4px;
 }
 
+.SoldButton{
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #d1410c;
+
+}
+
+svg > g > path{
+  fill: #950505;
+
+}

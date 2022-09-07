@@ -60,10 +60,6 @@
     {
       "id": 3,
       "eventName": "Performance con Gaston",
-<<<<<<< HEAD
-      "description": "urabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
-      "imageUrl": "Gaston.png",
-=======
       "description": "urabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
       "imageUrl": "Gaston.png",
       "startDatetime": "2022-11-17T13:45:00Z",
@@ -85,16 +81,15 @@
       "eventName": "FrontEnd con Gabi",
       "description": "urabitur eleifend consequat velit, at rutrum lacus semper vel. Nam tempus vulputate sapien eget facilisis. Nulla ut.",
       "imageUrl": "Gabi.png",
->>>>>>> 809ef08 ( fix date and add images)
       "startDatetime": "2022-11-17T13:45:00Z",
       "endDateTime": "2022-11-17T16:00:00Z",
       "venue": "123456 Fake St.",
-      "followers": 6,
+      "followers": 87934,
       "followByMe": false,     
       "tickets": [
         {
           "id": 1,
-          "quantity": 4,
+          "quantity": 0,
           "price": 0,
           "name": "Free Ticket"
         }
