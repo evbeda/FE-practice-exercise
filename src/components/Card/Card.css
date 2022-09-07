@@ -193,3 +193,7 @@ body .eds-text-color--primary-brand {
     cursor: pointer;
 }
 
+article{
+    position: relative;
+}
+

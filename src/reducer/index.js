@@ -25,7 +25,7 @@ export const reducerSample = (state = [], action) => {
                 }
                 return event
             })
-            console.log(newState)
+            // console.log(newState)
             return newState
 
         case CLICK_FOLLOW:
