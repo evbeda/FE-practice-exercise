@@ -188,3 +188,8 @@ body .eds-text-color--primary-brand {
     color: #d1410c;
     /* color: var(--eds-primary-brand,var(--eds-primary-brand,#d1410c)); */
 }
+
+.cursorPointer{
+    cursor: pointer;
+}
+

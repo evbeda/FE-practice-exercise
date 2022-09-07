@@ -12,13 +12,24 @@ moment.locale('es');
 
 
 const formatedDatetime = (datetime) => {
-  return (
-    moment(datetime).format('llll')
-    // moment(datetime).format('MMM D, YYYY, H:mm:')
-    );
+  let eventDateToShare = ""
+  let eventDate = moment()
+  let today = moment(datetime)
+  const diffDates = eventDate.diff(today,"days")
+  switch(diffDates){
+    case 0:
+      eventDateToShare = "Today!!!"
+      break;
+    case 1:
+      eventDateToShare = "Tomorrow!!!"
+      break;
+    default:
+      eventDateToShare = eventDate.format("llll")
+  }
+  return eventDateToShare
 }
 
-export const Card = ({event}) => {
+export const Card = ({event, handleShowModal, setEventsToSell}) => {
   const {
     eventName,
     startDatetime,
@@ -28,11 +39,31 @@ export const Card = ({event}) => {
     tickets,
     imageUrl,
   } = event;
+
+  const AreThereTickets = () =>{
+    let flag = false;
+    tickets.forEach(ticket => {
+        if(ticket.quantity != 0){
+          flag = true;
+        }
+    });
+    return flag
+  }
+
+  const goToCheckOutEvent = () =>{
+    setEventsToSell(event);
+    handleShowModal();
+  }
   
   return (
     <article>
 
-      <EventImage imageUrl={imageUrl} />
+      <EventImage 
+        className={`${AreThereTickets() ? "cursorPointer" : ""}`}
+        imageUrl={imageUrl} 
+        showModal={AreThereTickets() ? goToCheckOutEvent : null} 
+        AreThereTickets={AreThereTickets}
+      />
       
       <div className="eds-event-card-content__content-container eds-event-card-content__content-container--consumer">
         <div className="eds-event-card-content__content">
@@ -43,7 +74,13 @@ export const Card = ({event}) => {
             <div className="eds-event-card-content__primary-content">
 
               {/* NOMBRE EVENTO */}
-              <a tabIndex="0" href="https://www.eventbrite.com.ar/e/vino-al-roble-tickets-412875932027?aff=ebdssbcitybrowse" className="eds-event-card-content__action-link" aria-label="" target="_blank" rel="noopener">
+              <a 
+                onClick={AreThereTickets() ? goToCheckOutEvent : null} 
+                className={`eds-event-card-content__action-link ${AreThereTickets() ? "cursorPointer" : ""}`} 
+                aria-label="" 
+                target="_blank" 
+                rel="noopener"
+              >
                 <h3 className="eds-event-card-content__title eds-text-color--ui-800 eds-text-bl eds-text-weight--heavy">
                   <div data-spec="event-card__formatted-name">
                     <div className="eds-is-hidden-accessible">
