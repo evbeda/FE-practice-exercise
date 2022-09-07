@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Card} from "../card/Card"
 import "./Container.css"
 
 export const Container = ({eventStorage, getAllEvents}) =>{
@@ -49,7 +50,9 @@ export const Container = ({eventStorage, getAllEvents}) =>{
             <h2 className="titleListEvents">Events in your <a className="titleOtherColor">zone</a></h2>
         </section>
         <section className="eventsContainer">
-            placeHolder
+            {events.map(event =>{
+                return <Card key={event.id} event={event} />
+            })}
         </section>
         </>
     )

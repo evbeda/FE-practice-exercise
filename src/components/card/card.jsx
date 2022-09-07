@@ -6,7 +6,7 @@ import { Subcontent } from "../subcontent/Subcontent";
 import moment from "moment";
 import 'moment/locale/es';
 
-import './card.css'
+import './Card.css'
 
 moment.locale('es');
 
