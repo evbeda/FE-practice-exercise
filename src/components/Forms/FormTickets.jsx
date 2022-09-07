@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { convertToArray } from '../../utils/utils';
 import { showFee } from "../../utils/utils";
-
+import "./Form.css";
 
 export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, changeQuantityTicket, handleCloseModal }){
     const [isDisabled, setDisabled] = useState(true)
@@ -31,30 +31,35 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
         <form onSubmit={handleSubmit}>
             {tickets.map(ticket => {
                 return(
-                    <div key={`${ticket.id}-div`}>
-                        <label key={`${ticket.id}-label`} htmlFor="tickets">
-                            {ticket.name}
-                        </label>
-                        <span>
-                            {` $${ticket.price}${showFee(ticket.fee, ticket.fee_type)}`}
-                        </span>
-                        <select 
-                        key={`${ticket.id}-select`}
-                        name="tickets"
-                        onChange={handleChange}
-                        id={ticket.id}
-                        >
-                            {convertToArray(ticket.quantity).map(num => {
-                                return(
-                                    <option 
-                                    key={`${num}-option`}
-                                    value={`${num}-${ticket.id}`}
-                                    >
-                                        {ticket.quantity > 0 ? num : "sold out" }
-                                    </option>
-                                )
-                            })}
-                        </select>
+                    <div key={`${ticket.id}-div`} className="container-form">
+                        <div>
+                            <label key={`${ticket.id}-label`} htmlFor="tickets">
+                                {ticket.name}
+                            </label>
+                            <p>
+                                {` $${ticket.price}${showFee(ticket.fee, ticket.fee_type)}`}
+                            </p>
+                        </div>
+                        <div className="row-form">
+                            <select 
+                            key={`${ticket.id}-select`}
+                            name="tickets"
+                            onChange={handleChange}
+                            id={ticket.id}
+                            className="option-ticket"
+                            >
+                                {convertToArray(ticket.quantity).map(num => {
+                                    return(
+                                        <option 
+                                        key={`${num}-option`}
+                                        value={`${num}-${ticket.id}`}
+                                        >
+                                            {ticket.quantity > 0 ? num : "sold out" }
+                                        </option>
+                                    )
+                                })}
+                            </select>
+                        </div>
                     </div>
                 )
             })}

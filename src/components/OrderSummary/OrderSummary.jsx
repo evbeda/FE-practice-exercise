@@ -39,7 +39,7 @@ export function OrderSummary({ eventsToSell, ticketsInfo }){
             </div>
             <div className="row-order">
                 <h3 class="total-order">Total</h3>
-                <p class="total-order">$ {subTotal + fees}</p>
+                <p class="total-order">$ {(subTotal + fees).toFixed(2)}</p>
             </div>
         </div>
         
