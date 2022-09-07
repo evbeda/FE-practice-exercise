@@ -1,7 +1,8 @@
 
 import React from "react";
 import { EventImage } from "../eventImage/EventImage";
-import { HeartButton } from "../heartButton/HeartButton";
+// import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
+import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
 import { Subcontent } from "../subcontent/Subcontent";
 import moment from "moment";
 import 'moment/locale/es';
@@ -31,6 +32,7 @@ const formatedDatetime = (datetime) => {
 
 export const Card = ({event, handleShowModal, setEventsToSell}) => {
   const {
+    id,
     eventName,
     startDatetime,
     venue,
@@ -38,6 +40,7 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
     organizer,
     tickets,
     imageUrl,
+    followByMe,
   } = event;
 
   const AreThereTickets = () =>{
@@ -68,7 +71,7 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
       <div className="eds-event-card-content__content-container eds-event-card-content__content-container--consumer">
         <div className="eds-event-card-content__content">
           
-          <HeartButton />
+          <HeartButtonConnected id={id} following={followByMe} />
 
           <div className="eds-event-card-content__content__principal">
             <div className="eds-event-card-content__primary-content">

@@ -26,7 +26,7 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
             {tickets.map(ticket => {
                 return(
                     <div key={`${ticket.id}-div`}>
-                        <label key={`${ticket.id}-label`} for="tickets">
+                        <label key={`${ticket.id}-label`} htmlFor="tickets">
                             {ticket.name}
                         </label>
                         <span>
