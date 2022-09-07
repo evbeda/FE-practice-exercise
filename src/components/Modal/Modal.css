@@ -1,0 +1,25 @@
+@import "../../styles.css";
+
+dialog{
+    width: 80%;
+}
+
+.container-modal{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.col-modal{
+    width: 100%;
+}
+
+#close-icon{
+    position: absolute;
+    margin-left: 80rem;
+    font-size: x-large;
+    color:var(--primary-text-color);
+    cursor:pointer;
+}

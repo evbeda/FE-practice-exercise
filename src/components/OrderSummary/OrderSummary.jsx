@@ -1,18 +1,21 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import { calculateFee } from "../../utils/utils";
 
-export function OrderSummary({ eventTest, ticketsInfo }){
+export function OrderSummary({ eventsToSell, ticketsInfo }){
+    console.log(ticketsInfo)
+    const [ticketsInformation, setTicketsInfo] = useState([]);
     let subTotal = 0;
     let fees = 0
-    console.log(eventTest)
-    console.log(ticketsInfo)
+    useEffect(()=>{
+        setTicketsInfo(ticketsInfo)
+    },[ticketsInfo])
     return(
         <div>
             <h4>Order summary</h4>
             <div>
-                <img src={eventTest.imageUrl} alt={eventTest.eventName}/>
+                <img src={eventsToSell.imageUrl} alt={eventsToSell.eventName}/>
             </div>
-            {ticketsInfo.map(ticket => {
+            {ticketsInformation.map(ticket => {
                 if(ticket.purchased_amount > 0){
                     subTotal += ticket.purchased_amount * ticket.price
                     fees += calculateFee(ticket.purchased_amount, ticket.price, ticket.fee, ticket.fee_type)
