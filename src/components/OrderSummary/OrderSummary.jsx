@@ -4,6 +4,8 @@ import { calculateFee } from "../../utils/utils";
 export function OrderSummary({ eventTest, ticketsInfo }){
     let subTotal = 0;
     let fees = 0
+    console.log(eventTest)
+    console.log(ticketsInfo)
     return(
         <div>
             <h4>Order summary</h4>

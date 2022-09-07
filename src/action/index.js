@@ -26,7 +26,7 @@ export const deleteAllToDo = () => (dispatch, getState) =>{
     return dispatch(actionDeleteTodo)
 }
 
-export const changeQuantityTicket = (eventId, ticketsInfo) => (dispatch) => {
+export const changeQuantityTicket = (eventId, ticketsInfo) => (dispatch, getState) => {
   updateQuantity.payload = [eventId, ...ticketsInfo]
   return dispatch(updateQuantity)
 }
