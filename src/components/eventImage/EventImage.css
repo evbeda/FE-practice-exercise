@@ -77,3 +77,8 @@ img {
 .cursorPointer{
     cursor: pointer;
 }
+
+.eds-max-img{
+    width: 200px;
+    height: 200px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "../card/Card"
+import { Card } from "../Card/Card"
 import ModalConected from "../Modal/ModalConnected";
 
 import "./Container.css"

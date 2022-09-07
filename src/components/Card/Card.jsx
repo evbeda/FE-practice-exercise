@@ -4,31 +4,9 @@ import { EventImage } from "../eventImage/EventImage";
 // import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
 import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
 import { Subcontent } from "../subcontent/Subcontent";
-import moment from "moment";
-import 'moment/locale/es';
+import { formatedDatetime } from "../../utils/utils";
+import './Card.css';
 
-import './Card.css'
-
-moment.locale('es');
-
-//exportar funcion utils
-const formatedDatetime = (datetime) => {
-  let eventDateToShare = ""
-  let eventDate = moment()
-  let today = moment(datetime)
-  const diffDates = eventDate.diff(today,"days")
-  switch(diffDates){
-    case 0:
-      eventDateToShare = "Today!!!"
-      break;
-    case 1:
-      eventDateToShare = "Tomorrow!!!"
-      break;
-    default:
-      eventDateToShare = eventDate.format("llll")
-  }
-  return eventDateToShare
-}
 
 export const Card = ({event, handleShowModal, setEventsToSell}) => {
   const {
