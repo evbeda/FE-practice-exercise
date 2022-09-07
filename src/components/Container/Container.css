@@ -50,3 +50,10 @@
     padding: 30px;
 }
 
+.blur{
+    width: 100%;
+    background-color: rgba(201, 198, 198, 0.4);
+    border: none;
+    height: 100%;
+}
+
