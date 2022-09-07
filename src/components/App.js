@@ -11,8 +11,6 @@ const App = () => {
   return (
     <div className="App">
       <ContainerConected/>
-      <ModalConected />
-
     </div>
   );
 };
