@@ -11,6 +11,7 @@
       "followers": 156,
       "tickets": [
         {
+          "id": 1,
           "quantity": 100,
           "price": 14.56,
           "name": "General Ticket",
@@ -18,6 +19,7 @@
           "fee": "1.50"
         },
         {
+          "id": 2,
           "quantity": 50,
           "price": 35.0,
           "name": "VIP Ticket",
@@ -25,6 +27,7 @@
           "fee": "5"
         },
         {
+          "id": 3,
           "quantity": 5,
           "price": 35.0,
           "name": "VIP Ticket",
@@ -43,6 +46,7 @@
       "followers": 14567,
       "tickets": [
         {
+          "id": 1,
           "quantity": 18,
           "price": 14.56,
           "name": "General Ticket",
@@ -62,6 +66,7 @@
       "followers": 6,
       "tickets": [
         {
+          "id": 1,
           "quantity": 4,
           "price": 0,
           "name": "Free Ticket"
@@ -79,6 +84,7 @@
       "followers": 1566,
       "tickets": [
         {
+          "id": 1,
           "quantity": 100,
           "price": 14.56,
           "name": "General Ticket",
@@ -86,6 +92,7 @@
           "fee": "1.50"
         },
         {
+          "id": 2,
           "quantity": 50,
           "price": 35.0,
           "name": "VIP Ticket",
@@ -93,12 +100,14 @@
           "fee": "5"
         },
         {
+          "id": 3,
           "quantity": 5,
           "price": 35.0,
           "name": "VIP Ticket",
           "fee_type": "none"
         },
         {
+          "id": 4,
           "quantity": 5,
           "price": 0.0,
           "name": "Free Ticket"
