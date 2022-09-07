@@ -3,10 +3,6 @@ import "../styles.css";
 
 import ContainerConected from './Container/ContainerConected.jsx';
 
-
-
-import { Card } from "./card/Card";
-
 const evntoPrueba = {
   "id": 1,
   "eventName": "Test Event 1",
@@ -48,16 +44,5 @@ const App = () => {
     </div>
   );
 };
-// const App = () => {
-//   return (
-//     <>
-//       <div className="App">
-//       Test page
-//       </div>
-//       <Card event={evntoPrueba}/>
-//     </>
-// );
-// };
-
 
 export default App;

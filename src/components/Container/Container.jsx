@@ -1,10 +1,21 @@
 import React, { useEffect, useState } from "react";
-import {Card} from "../card/Card"
+import {Card} from "../Card/Card.jsx"
 import "./Container.css"
 
 export const Container = ({eventStorage, getAllEvents}) =>{
 
     const [events, setEvets ] = useState([]);
+    const [showModal ,setShowModal] = useState(false);
+    const [eventsToSell ,setEventsToSell] = useState({});
+
+    const handleShowModal = () =>{
+        setShowModal(true);
+    }
+
+    const handleCloseModal = () =>{
+        setShowModal(true);
+    }
+
     useEffect(() => {
         getAllEvents().then((result)=>{
             setEvets(result.payload)
@@ -49,10 +60,17 @@ export const Container = ({eventStorage, getAllEvents}) =>{
         <section className="eventsContainerTitle">
             <h2 className="titleListEvents">Events in your <a className="titleOtherColor">zone</a></h2>
         </section>
-        <section className="eventsContainer">
+        <section>
+            <ul className="eventsContainer">
             {events.map(event =>{
-                return <Card key={event.id} event={event} />
+                return <Card 
+                            key={event.id}
+                            event={event} 
+                            handleShowModal={handleShowModal}
+                            setEventsToSell={setEventsToSell}
+                            />
             })}
+            </ul>
         </section>
         </>
     )
