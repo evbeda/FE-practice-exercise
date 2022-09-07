@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "../card/Card"
+import { Card } from "../Card/Card"
 import "./Container.css"
 
 export const Container = ({eventStorage, getAllEvents}) =>{
