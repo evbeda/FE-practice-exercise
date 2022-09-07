@@ -11,7 +11,7 @@ import './Card.css'
 
 moment.locale('es');
 
-
+//exportar funcion utils
 const formatedDatetime = (datetime) => {
   let eventDateToShare = ""
   let eventDate = moment()
@@ -119,5 +119,3 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
   );
 
 }
-
-
