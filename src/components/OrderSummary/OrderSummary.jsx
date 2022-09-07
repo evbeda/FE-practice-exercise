@@ -8,9 +8,11 @@ export function OrderSummary({ eventsToSell, ticketsInfo }){
     const [ticketsInformation, setTicketsInfo] = useState([]);
     let subTotal = 0;
     let fees = 0
+    
     useEffect(()=>{
         setTicketsInfo(ticketsInfo)
     },[ticketsInfo])
+    
     return(
         <div class="order-container">
             <div>
