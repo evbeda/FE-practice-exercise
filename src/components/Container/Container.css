@@ -8,6 +8,7 @@
     width: 30%;
     height: 30%;
     position: absolute;
+    fill: #ffffff;
 }
 @media screen and (min-width:1000px) {
     .home-header-h1{
@@ -52,7 +53,6 @@
 
 .blur{
     width: 100%;
-    background-color: rgba(201, 198, 198, 0.4);
     border: none;
     height: 100%;
 }

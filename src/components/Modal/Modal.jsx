@@ -38,7 +38,7 @@ export function Modal(props){
         <dialog open={showModal} id="modal">
           <div className="container-modal">
           <div className="col-modal" id="form-section">
-                  <h1>{eventsToSell ? eventsToSell.eventName : ""}</h1>
+                  <h1>{eventsToSell ? eventsToSell.eventName.toUpperCase() : ""}</h1>
                   <p>{eventsToSell ? eventsToSell.startDatetime : ""}</p>
                   <FormTickets
                   eventId={eventsToSell ? eventsToSell.id : ""}
@@ -57,7 +57,7 @@ export function Modal(props){
                   />
               </div>
               <div onClick={handleCloseModal} className="col" id="close-icon">
-                <i class="fa-regular fa-circle-xmark"></i>
+                <i className="fa-regular fa-circle-xmark" id="close-modal"></i>
               </div>
             
           </div>

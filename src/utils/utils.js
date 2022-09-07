@@ -34,7 +34,7 @@ export function calculateFee(quantity, price, fee, type){
         case "fixed":
             return quantity * fee
         case "percent":
-            return (quantity * price) * parseFloat(fee) / 100
+            return (quantity * price) * (fee / 100)
         default:
             return null
     }
