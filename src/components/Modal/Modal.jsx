@@ -40,7 +40,8 @@ const eventTest = {
   }
 
 export function Modal(props){
-    const { changeQuantityTicket } = props
+    const { changeQuantityTicket, showModal, handleCloseModal } = props
+
     const [ticketsInfo, setTicketsInfo] = useState(
         eventTest.tickets.map(ticket => {
             return(
@@ -50,12 +51,13 @@ export function Modal(props){
                     price: ticket.price,
                     purchased_amount: 0,
                     fee_type: ticket.fee_type,
+                    fee: ticket.fee ? ticket.fee : ""
                 }
             )
         })
     )
     return(
-        <dialog open>
+        <dialog open={showModal}>
             <div className="row">
                 <h1>{eventTest.eventName}</h1>
                 <p>{eventTest.startDatetime}</p>
@@ -65,6 +67,7 @@ export function Modal(props){
                 ticketsInfo={ticketsInfo}
                 setTicketsInfo={setTicketsInfo}
                 changeQuantityTicket={changeQuantityTicket}
+                handleCloseModal={handleCloseModal}
                 />
                 <p>Powered by Eventbrite</p>
                 <FormLanguage />

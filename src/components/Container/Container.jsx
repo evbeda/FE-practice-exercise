@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card } from "../Card/Card"
+import { Card } from "../card/Card"
+import ModalConected from "../Modal/ModalConnected";
+
 import "./Container.css"
 
 export const Container = ({eventStorage, getAllEvents}) =>{
@@ -13,7 +15,7 @@ export const Container = ({eventStorage, getAllEvents}) =>{
     }
 
     const handleCloseModal = () =>{
-        setShowModal(true);
+        setShowModal(false);
     }
 
     useEffect(() => {
@@ -63,12 +65,20 @@ export const Container = ({eventStorage, getAllEvents}) =>{
         <section>
             <ul className="eventsContainer">
             {events.map(event =>{
-                return <Card 
-                            key={event.id}
-                            event={event} 
-                            handleShowModal={handleShowModal}
-                            setEventsToSell={setEventsToSell}
-                            />
+                return (
+                <>
+                    <Card 
+                    key={event.id}
+                    event={event} 
+                    handleShowModal={handleShowModal}
+                    setEventsToSell={setEventsToSell}
+                    />
+                    <ModalConected
+                    showModal={showModal}
+                    handleCloseModal={handleCloseModal}
+                    />
+                 </>
+                )
             })}
             </ul>
         </section>

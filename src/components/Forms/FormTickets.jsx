@@ -4,7 +4,9 @@ import { convertToArray } from '../../utils/utils';
 import { showFee } from "../../utils/utils";
 
 
-export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, changeQuantityTicket }){
+export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, changeQuantityTicket, handleCloseModal }){
+    const [isDisabled, setDisabled] = useState(true)
+
     const handleChange = (e) => {
         let selected = e.target.value.split("-");
         let updateTickets = ticketsInfo.map(ticket => {
@@ -13,12 +15,16 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
             }
             return ticket;
         }) 
-        setTicketsInfo(updateTickets); 
+        setTicketsInfo(updateTickets);
+        setDisabled(false)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         changeQuantityTicket(eventId, ticketsInfo);
+        alert("Gracias por comprar")
+        handleCloseModal();
+        
     }
        
     return(
@@ -52,6 +58,6 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                     </div>
                 )
             })}
-            <button type="submit">Checkout</button>
+            <button id="form-btn" type="submit" disabled={isDisabled}>Checkout</button>
         </form>
     )}
