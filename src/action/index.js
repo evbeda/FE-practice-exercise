@@ -27,7 +27,24 @@ export const deleteAllToDo = () => (dispatch, getState) =>{
 }
 
 export const changeQuantityTicket = (eventId, ticketsInfo) => (dispatch, getState) => {
-  updateQuantity.payload = [eventId, ...ticketsInfo]
+  let state = getState()
+  let eventToUpdate = state.find(event => event.id == eventId)
+  eventToUpdate.tickets.map(ticket => {
+    ticketsInfo.map(updatedTicket => {
+          if(ticket.id == updatedTicket.id){
+              ticket.quantity -= updatedTicket.purchased_amount
+          }
+          return updatedTicket
+      })
+      return ticket
+  })
+  let newState = state.map(event => {
+      if (event.id == eventToUpdate.id){
+          event = eventToUpdate
+      }
+      return event
+  })
+  updateQuantity.payload = newState;
   return dispatch(updateQuantity)
 }
 

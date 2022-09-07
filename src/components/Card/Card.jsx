@@ -1,34 +1,11 @@
 
 import React from "react";
 import { EventImage } from "../eventImage/EventImage";
-// import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
 import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
 import { Subcontent } from "../subcontent/Subcontent";
-import moment from "moment";
-import 'moment/locale/es';
+import { formatedDatetime } from "../../utils/utils";
+import './Card.css';
 
-import './Card.css'
-
-moment.locale('es');
-
-//exportar funcion utils
-const formatedDatetime = (datetime) => {
-  let eventDateToShare = ""
-  let eventDate = moment()
-  let today = moment(datetime)
-  const diffDates = eventDate.diff(today,"days")
-  switch(diffDates){
-    case 0:
-      eventDateToShare = "Today!!!"
-      break;
-    case 1:
-      eventDateToShare = "Tomorrow!!!"
-      break;
-    default:
-      eventDateToShare = eventDate.format("llll")
-  }
-  return eventDateToShare
-}
 
 export const Card = ({event, handleShowModal, setEventsToSell}) => {
   const {
@@ -58,13 +35,15 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
     handleShowModal();
   }
   
+  let thereAreTickets = AreThereTickets()
+  
   return (
     <article>
 
       <EventImage 
-        className={`${AreThereTickets() ? "cursorPointer" : ""}`}
+        className={`${thereAreTickets ? "cursorPointer" : ""}`}
         imageUrl={imageUrl} 
-        showModal={AreThereTickets() ? goToCheckOutEvent : null} 
+        showModal={thereAreTickets ? goToCheckOutEvent : null} 
         AreThereTickets={AreThereTickets}
       />
       
@@ -82,8 +61,7 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
                 className={`eds-event-card-content__action-link ${AreThereTickets() ? "cursorPointer" : ""}`} 
                 aria-label="" 
                 target="_blank" 
-                rel="noopener"
-              >
+                rel="noopener">
                 <h3 className="eds-event-card-content__title eds-text-color--ui-800 eds-text-bl eds-text-weight--heavy">
                   <div data-spec="event-card__formatted-name">
                     <div className="eds-is-hidden-accessible">
@@ -106,7 +84,8 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
               tickets={tickets}
               venue={venue}
               organizer={organizer}
-              followers={followers} 
+              followers={followers}
+              thereAreTickets={thereAreTickets}
             />
 
           </div>

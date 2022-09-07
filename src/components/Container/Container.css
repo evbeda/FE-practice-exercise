@@ -8,6 +8,7 @@
     width: 30%;
     height: 30%;
     position: absolute;
+    fill: #ffffff;
 }
 @media screen and (min-width:1000px) {
     .home-header-h1{
@@ -24,7 +25,7 @@
 
 .eventsContainerTitle{
     display: flex;
-    margin: 10px 0 0 50px;
+    margin: 20px 0 20px 50px;
     position: relative;
 }
 
@@ -48,5 +49,11 @@
     box-shadow: 10px 10px 62px -8px rgba(166,166,166,1);
     margin: 10px;
     padding: 30px;
+}
+
+.blur{
+    width: 100%;
+    border: none;
+    height: 100%;
 }
 

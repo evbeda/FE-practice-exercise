@@ -1,0 +1,46 @@
+@import "../../styles.css";
+
+div.order-container{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+h4{
+    font-family: var(--font-family);
+    margin: 1rem;
+}
+
+.img-order{
+    width: 100%;
+    height: 20rem;
+}
+
+.row-order{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #4f4c63;
+}
+
+.total-order{
+    font-size: 1.5rem;
+    color: #39364f;
+}
+
+.info-order{
+    font-size: 1.2rem;
+    color: #47445c
+}
+
+
+p, .total-order{
+    margin: 1rem;
+}
+
+#fee-icon{
+    margin: 0.2rem;
+}
+

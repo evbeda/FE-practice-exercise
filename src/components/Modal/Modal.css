@@ -1,0 +1,82 @@
+@import "../../styles.css";
+
+dialog{
+    width: 100%;
+    background-color: rgba(46, 33, 62, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    margin: auto;
+    padding: 0;
+    inset: 0;
+    height: 100%;
+}
+
+.container-modal{
+    display: flex;
+    flex-flow: row;
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    color: var(--primary-text-color);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+.col-modal{
+    width: 100%;
+    margin: 2rem;
+}
+
+#close-icon{
+    position: absolute;
+    margin-left: 80rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#close-modal{
+    background-color: rgba(234, 232, 238, 0.358);
+    border-radius: 50px;
+    font-size: xx-large;
+    color: #4b4d63
+}
+
+#close-modal:hover{
+    transition: 0.5s;
+    background-color: rgba(236, 233, 240, 0.318);
+    border-radius: 50px;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+#order-section{
+    width: 45%;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #ebe9ecf1;
+    padding-bottom: 1rem;
+}
+
+#event-name-modal{
+    margin: 1rem;
+    font-size: x-large;
+}
+
+#event-date-modal{
+    font-size: medium;
+    color: #888b9c;
+}
+
+
+
+
+
