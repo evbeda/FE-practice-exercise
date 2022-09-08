@@ -43,9 +43,9 @@ export function calculateFee(quantity, price, fee, type){
 export function showFee(fee, fee_type){
     switch(fee_type){
         case "fixed":
-            return `+ $${fee}`
+            return ` + $${fee}`
         case "percent":
-            return `+ ${fee}%`
+            return ` + ${fee}%`
         default:
             return ""
     }

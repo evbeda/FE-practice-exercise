@@ -78,22 +78,22 @@ export const Container = ({eventStorage, getAllEvents}) =>{
                         handleShowModal={handleShowModal}
                         setEventsToSell={setEventsToSell}
                         />
-                        {
-                        showModal 
-                        ?
-                        <ModalConected 
-                        showModal={showModal}
-                        eventsToSell={eventsToSell}
-                        handleCloseModal={handleCloseModal}
-                        />
-                        :
-                        null
-                        } 
                     </>
                     )
                 })}
                 </ul>
-            </section>    
+            </section>
+            {
+                showModal 
+                ?
+                <ModalConected 
+                showModal={showModal}
+                eventsToSell={eventsToSell}
+                handleCloseModal={handleCloseModal}
+                />
+                :
+                null
+            }     
         </section>
     )
 }

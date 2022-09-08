@@ -3,6 +3,8 @@ import { useState } from "react";
 import { convertToArray } from '../../utils/utils';
 import { showFee } from "../../utils/utils";
 import "./Form.css";
+import { alertMessage } from "./alert";
+
 
 export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, changeQuantityTicket, handleCloseModal }){
     const [isDisabled, setDisabled] = useState(true)
@@ -22,7 +24,7 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
     const handleSubmit = (e) => {
         e.preventDefault();
         changeQuantityTicket(eventId, ticketsInfo);
-        alert("Gracias por comprar")
+        alertMessage()
         handleCloseModal();
         
     }
@@ -32,11 +34,11 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
             {tickets.map(ticket => {
                 return(
                     <div key={`${ticket.id}-div`} className="container-form">
-                        <div>
+                        <div className="ticket-name-price">
                             <label key={`${ticket.id}-label`} htmlFor="tickets">
                                 {ticket.name}
                             </label>
-                            <p>
+                            <p className="ticket-price">
                                 {` $${ticket.price}${showFee(ticket.fee, ticket.fee_type)}`}
                             </p>
                         </div>

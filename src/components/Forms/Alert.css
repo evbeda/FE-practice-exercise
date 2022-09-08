@@ -1,0 +1,15 @@
+@import "../../styles.css";
+
+
+body {
+    font-family: var(--font-family);
+  }
+
+.swal2-confirm.swal2-styled{
+    background-color: #f05537;
+    border-color: #f05537;
+}
+
+.swal2-confirm.swal2-styled:hover{
+    background-color: #d1410c;
+}

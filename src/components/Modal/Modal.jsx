@@ -48,7 +48,7 @@ export function Modal(props){
                   changeQuantityTicket={changeQuantityTicket}
                   handleCloseModal={handleCloseModal}
                   />
-                  <p>Powered by Eventbrite</p>
+                  <p className="powered">Powered by <span id="eventbrite">eventbrite</span></p>
               </div>
               <div className="col-modal" id="order-section">
                   <OrderSummary 
