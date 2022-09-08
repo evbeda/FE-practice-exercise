@@ -30,8 +30,8 @@ export const Container = ({eventStorage, getAllEvents}) =>{
 
     return(
         <section className={showModal ? "blur" : ""}>
-            <section className="containerHeader">
-                <h1 className="home-header-h1">
+            <section className="containerHeader" data-testid="header">
+                <h1 className="home-header-h1" data-testid="svg">
                     <svg 
                         id="home-header-text_svg__Layer_1" 
                         x="0" 
@@ -64,7 +64,7 @@ export const Container = ({eventStorage, getAllEvents}) =>{
                     data-testid="home-image"
                 />
             </section>
-            <section className="eventsContainerTitle">
+            <section className="eventsContainerTitle" data-testid="events-title">
                 <h2 className="titleListEvents">Events in your <a className="titleOtherColor">zone</a></h2>
             </section>
             <section>
