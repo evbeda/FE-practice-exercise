@@ -2,7 +2,7 @@ import { convertToArray } from "./utils.js";
 
 describe('ConvertToArray method', () => {
     
-  it('should return an array from 1 to the number indicated', () => {
+  it.each(
     [
       [1, [0, 1]],
       [2, [0, 1, 2]],
@@ -11,8 +11,8 @@ describe('ConvertToArray method', () => {
       [5, [0, 1, 2, 3, 4, 5,]],
       [6, [0, 1, 2, 3, 4, 5, 6]],
       [7, [0, 1, 2, 3, 4, 5, 6, 7]],
-    ].forEach(([ n, expected_array] ) => {
+    ])('should return an array from 1 to the number indicated', ( n, expected_array) => {
       expect(convertToArray(n)).toEqual(expected_array)
-    });
+    
   });
 });
