@@ -49,12 +49,14 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                             onChange={handleChange}
                             id={ticket.id}
                             className="option-ticket"
+                            data-testid="select"
                             >
                                 {convertToArray(ticket.quantity).map(num => {
                                     return(
                                         <option 
                                         key={`${num}-option`}
                                         value={`${num}-${ticket.id}`}
+                                        data-testid="select-option"
                                         >
                                             {ticket.quantity > 0 ? num : "sold out" }
                                         </option>
