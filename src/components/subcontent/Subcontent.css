@@ -139,7 +139,7 @@ body .eds-text-color--ui-800 {
 
 }
 
-svg > g > path{
+svg.SoldButton > g > path{
   fill: #950505;
 
 }

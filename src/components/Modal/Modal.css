@@ -59,6 +59,7 @@ h1{
 
 #order-section{
     width: 45%;
+    height: 150%;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -75,6 +76,16 @@ h1{
     font-size: medium;
     color: #888b9c;
 }
+
+.powered{
+    color: #797b8f;
+    size: 0.7rem;
+}
+
+#eventbrite{
+    color: #2a2a2d;
+}
+
 
 
 

@@ -23,5 +23,52 @@ form{
     width: 6rem;
     height: 2.5rem;
     text-align: center;
+    border-color: #edecf1
 }
 
+.option-ticket:hover{
+    border-color: #989aa9;
+}
+
+#form-btn{
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 1.5rem;
+    margin-left: 35rem;
+    transition: 0.5s;
+}
+
+#form-btn:hover{
+    background-color: var(--dark-accent-color);
+    transition: 0.5s;
+}
+
+button#form-btn[disabled]{
+    background-color: #989aa9;
+}
+
+button#form-btn[disabled]:hover{
+    background-color: #989aa9;
+}
+
+.ticket-name-price{
+    margin-top: 1.5rem;
+    width: 100%;
+    text-align: start;
+}
+
+.ticket-name-price > label {
+    color: #3e3b53;
+    font-size: x-large;
+}
+
+.ticket-price{
+    margin-left: 0;
+    color: #989aa9;
+    font-size: large;
+}
