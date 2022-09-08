@@ -4,10 +4,10 @@ moment.locale('es');
 import { 
   convertToArray,
   formatedDatetime,
-  showFee
+  showFee,
+  calculateFee
  } from "./utils.js";
  
-
 describe('ConvertToArray method', () => {
     
   it.each(
@@ -46,4 +46,21 @@ describe("show method test",()=>{
       expect(showFee(fee, fee_type)).toEqual(return_fee)
     
   });
+
+});
+
+
+describe('Calculate fee method', () => {
+
+  it('should return the result of the tickets free if correspond apply one', () => {
+    [
+      [1, 20, 1.50, "fixed", 1.50],
+      [3, 3000, 5, "percent", 450],
+      [10, 400, 10.5, "percent", 420],
+      [7, 100, 500, "fixed", 3500],
+      [1, 1000, 0, "", null]
+    ].forEach(([quantity, price, fee, type, expected_result]) => {
+      expect(calculateFee(quantity, price, fee, type, expected_result)).toEqual(expected_result)
+    })
+  })
 })
