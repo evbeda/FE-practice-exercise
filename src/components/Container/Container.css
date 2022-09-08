@@ -45,8 +45,15 @@
     margin: 0 0 0 15px;
     width: 100%;
 }
+
 .eventsContainer > article {
     box-shadow: 10px 10px 62px -8px rgba(166,166,166,1);
+    margin: 10px;
+    padding: 30px;
+}
+
+.eventsContainer > article:hover {
+    box-shadow: 10px 10px 62px -8px rgb(94, 93, 93);
     margin: 10px;
     padding: 30px;
 }
