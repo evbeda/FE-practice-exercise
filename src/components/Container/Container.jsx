@@ -57,7 +57,12 @@ export const Container = ({eventStorage, getAllEvents}) =>{
                         </g>
                     </svg>
                 </h1>
-                <img src="ImageBackGround.jpeg" alt="Header" className="imagesHeader"/>
+                <img 
+                    src="ImageBackGround.jpeg"
+                    alt="Header" 
+                    className="imagesHeader"
+                    data-testid="home-image"
+                />
             </section>
             <section className="eventsContainerTitle">
                 <h2 className="titleListEvents">Events in your <a className="titleOtherColor">zone</a></h2>
