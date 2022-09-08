@@ -3,7 +3,8 @@ import 'moment/locale/es';
 moment.locale('es');
 import { 
   convertToArray,
-  formatedDatetime
+  formatedDatetime,
+  showFee
  } from "./utils.js";
  
 
@@ -32,6 +33,17 @@ describe("formatedDatetime method test",()=>{
       [moment((new Date().getDate() + 30)),moment((new Date().getDate() + 30)).format("llll")]
     ])('should return today tomorrow or format date depende case', ( day, formatDate) => {
       expect(formatedDatetime(day)).toEqual(formatDate)
+    
+  });
+})
+
+describe("show method test",()=>{
+  it.each(
+    [
+      ["5","fixed"," + $5"],
+      ["10","percent"," + 10%"]
+    ])('should return + fee or % fee depend of case ', ( fee, fee_type , return_fee) => {
+      expect(showFee(fee, fee_type)).toEqual(return_fee)
     
   });
 })
