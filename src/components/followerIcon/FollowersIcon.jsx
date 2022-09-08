@@ -4,7 +4,7 @@ import "./FollowersIcon.css"
 export const FollowersIcon = () => {
   
   return (
-    <i className="eds-vector-image eds-icon--xsmall" data-spec="icon" data-testid="icon" aria-hidden="true">
+    <i data-testid="followers-icon" className="eds-vector-image eds-icon--xsmall" data-spec="icon" aria-hidden="true">
 
       <svg
           id="user-chunky_svg__eds-icon--user-chunky_svg"
