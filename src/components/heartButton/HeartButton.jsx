@@ -10,6 +10,7 @@ export const HeartButton = ({ clickHeartButton, id, following }) => {
       <span data-testid="event-image" className="eds-event-card__actions-id__412875932027 eds-event-card-content__actions-container__action eds-l-pad-all-1 eds-event-card-content__actions-icon--primary">
         <span data-testid="button-image" className="eds-icon-button eds-icon-button--neutral" data-spec="icon-button" >
           <button
+            data-testid ='heart-button'
             onClick={()=>clickHeartButton(id)}
             aria-pressed="false"
             className="eds-btn--button eds-btn--none eds-btn--icon-only"

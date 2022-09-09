@@ -4,7 +4,7 @@ import ModalConected from "../Modal/ModalConnected";
 
 import "./Container.css"
 
-export const Container = ({eventStorage, getAllEvents}) =>{
+export const Container = ({getAllEvents}) =>{
 
     const [events, setEvets ] = useState([]);
     const [showModal ,setShowModal] = useState(false);
@@ -24,9 +24,6 @@ export const Container = ({eventStorage, getAllEvents}) =>{
         })    
     }, [])
 
-    useEffect(() => {
-        setEvets(eventStorage)
-    }, [eventStorage])
 
     return(
         <section className={showModal ? "blur" : ""}>

@@ -2,9 +2,9 @@
 import React from "react";
 import { EventImage } from "../eventImage/EventImage";
 import { HeartButtonConnected } from "../heartButton/HeartButtonConnected";
-import { Subcontent } from "../subcontent/Subcontent";
 import { formatedDatetime } from "../../utils/utils";
 import './Card.css';
+import { SubcontentConnected } from "../subcontent/SubcontentConected";
 
 
 export const Card = ({event, handleShowModal, setEventsToSell}) => {
@@ -12,9 +12,6 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
     id,
     eventName,
     startDatetime,
-    venue,
-    followers,
-    organizer,
     tickets,
     imageUrl,
     followByMe,
@@ -38,7 +35,7 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
   let thereAreTickets = AreThereTickets()
   
   return (
-    <article>
+    <article data-testid ='card-component'>
 
       <EventImage 
         className={`${thereAreTickets ? "cursorPointer" : ""}`}
@@ -64,7 +61,7 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
                 rel="noopener">
                 <h3 className="eds-event-card-content__title eds-text-color--ui-800 eds-text-bl eds-text-weight--heavy">
                   <div data-spec="event-card__formatted-name">
-                    <div className="eds-is-hidden-accessible">
+                    <div className="eds-is-hidden-accessible" data-testid='event-name'>
                       {eventName}
                     </div>
                     <div className="eds-event-card__formatted-name--is-clamped eds-event-card__formatted-name--is-clamped-three eds-text-weight--heavy" aria-hidden="true" role="presentation" data-spec="event-card__formatted-name--content">
@@ -80,11 +77,8 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
               </div>
 
             </div>
-            <Subcontent
-              tickets={tickets}
-              venue={venue}
-              organizer={organizer}
-              followers={followers}
+            <SubcontentConnected
+              id={id}
               thereAreTickets={thereAreTickets}
             />
 

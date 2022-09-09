@@ -1,20 +1,25 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen } from '@testing-library/react';
 import {Container} from './Container';
 import '@testing-library/jest-dom';
+import React from 'react';
 
 
-jest.mock('../Card/Card', () => ({
-    Card: () => (<div data-testid="card-test" />)
-}));
 
 jest.mock('../Modal/Modal', () => ({
     Modal: () => (<div data-testid="modal-test" />)
 }));
 
+
+
 describe("Container page", ()=>{
-    const testFunction = async()=>{
+    const testFunction = ()=>{
         return {payload:[{id:1}]}
     }
+
+    let useEffect;
+    const mockUseEffect = () => {
+        useEffect.mockImplementationOnce(f => f());
+      };
 
     it("header render",()=>{
         render(<Container eventStorage={[]} getAllEvents={testFunction} />)
@@ -32,9 +37,21 @@ describe("Container page", ()=>{
         render(<Container eventStorage={[]} getAllEvents={testFunction} />)
         expect(screen.getByTestId("svg")).toBeInTheDocument();
     })
-    it("show cards",()=>{
-        render(<Container eventStorage={[{test1:1}]} getAllEvents={testFunction} />)
-        expect(screen.getByTestId("card-test")).toBeInTheDocument();
+    beforeEach(() => {
+        
+        useEffect = jest.spyOn(React, "useEffect");
+        mockUseEffect(); // 2 times
+    });
+    it("show cards",() =>  {
+
+        // const rendered = render(<Container getAllEvents={testFunction} />)
+        act(() => {
+            useEffect = jest.spyOn(Container, "getAllEvents");
+            render(<Container getAllEvents={testFunction} />)
+        });
+
+          
+        expect(screen.getByTestId("card-component")).toBeInTheDocument();
     })
     //como probar que el state show modal se active y muestre el modal
 })

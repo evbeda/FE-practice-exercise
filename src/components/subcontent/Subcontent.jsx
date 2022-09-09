@@ -16,7 +16,17 @@ const minimumPrice = (tickets) => {
   return chepeastTicket.price
 }
 
-export const Subcontent = ({tickets, venue, organizer, followers, thereAreTickets}) => {
+export const Subcontent = ({ id, thereAreTickets, eventsStates }) => {
+
+
+  const index = eventsStates.findIndex(event => event.id == id)
+
+  const {
+    followers,
+    tickets,
+    venue,
+    organizer
+  } = eventsStates[index]
   return (
 
     <div className="eds-event-card-content__sub-content">
@@ -32,7 +42,7 @@ export const Subcontent = ({tickets, venue, organizer, followers, thereAreTicket
       </div>
 
       <div className="eds-event-card-content__sub eds-text-bm eds-text-color--ui-600 eds-l-mar-top-1">
-        <div data-subcontent-key="follow" className="eds-event-card__sub-content--signal eds-text-color--ui-800 eds-text-weight--heavy">
+        <div data-testid="last-subcontent" data-subcontent-key="follow" className="eds-event-card__sub-content--signal eds-text-color--ui-800 eds-text-weight--heavy">
 
           {/*  ORGANIZER  */}
           <div data-subcontent-key="organizerName" className="eds-event-card__sub-content--organizer eds-text-color--ui-800 eds-text-weight--heavy card-text--truncated__two">
