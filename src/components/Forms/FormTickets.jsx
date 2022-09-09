@@ -35,10 +35,10 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                 return(
                     <div key={`${ticket.id}-div`} className="container-form">
                         <div className="ticket-name-price">
-                            <label key={`${ticket.id}-label`} htmlFor="tickets">
+                            <label key={`${ticket.id}-label`} htmlFor="tickets" data-testid="ticket-name">
                                 {ticket.name}
                             </label>
-                            <p className="ticket-price">
+                            <p className="ticket-price" data-testid="ticket-price">
                                 {` $${ticket.price}${showFee(ticket.fee, ticket.fee_type)}`}
                             </p>
                         </div>
@@ -46,7 +46,7 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                             {
                                 ticket.quantity <= 0 
                                 ?
-                                <span className="sold-ticket">Sold out</span>
+                                <span className="sold-ticket" data-testid="sold-out-ticket">Sold out</span>
                                 :
                                 <select 
                                 key={`${ticket.id}-select`}
@@ -54,14 +54,14 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                                 onChange={handleChange}
                                 id={ticket.id}
                                 className="option-ticket"
-                                data-testid="select"
+                                data-testid="select-form"
                                 >
-                                {convertToArray(ticket.quantity).map(num => {
+                                {
+                                convertToArray(ticket.quantity).map(num => {
                                     return(
                                         <option 
                                         key={`${num}-option`}
                                         value={`${num}-${ticket.id}`}
-                                        data-testid="select-option"
                                         >
                                            {num}
                                         </option>
@@ -73,6 +73,6 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                     </div>
                 )
             })}
-            <button id="form-btn" type="submit" disabled={isDisabled}>Checkout</button>
+            <button id="form-btn" type="submit" disabled={isDisabled} data-testid="button-form">Checkout</button>
         </form>
     )}

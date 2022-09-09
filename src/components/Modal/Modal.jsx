@@ -24,7 +24,7 @@ export function Modal(props){
     )
    
     return(
-        <dialog open={showModal} id="modal">
+        <dialog open={showModal} id="modal" data-testid="modal-dialog">
           <div className="container-modal">
           <div className="col-modal" id="form-section">
                   <h1 id="event-name-modal">{eventsToSell.eventName.toUpperCase()}</h1>

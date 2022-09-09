@@ -5,7 +5,7 @@ import "./Alert.css"
 export const alertMessage = () => {
     Swal.fire({
         title: '¡Thanks for your purchase!',
-        text: 'We send the ticket to your email',
+        text: 'We sent the ticket to your email',
         width: 600,
         padding: '3em',
         color: '#1e0a3c',
