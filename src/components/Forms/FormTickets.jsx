@@ -43,14 +43,19 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                             </p>
                         </div>
                         <div className="row-form">
-                            <select 
-                            key={`${ticket.id}-select`}
-                            name="tickets"
-                            onChange={handleChange}
-                            id={ticket.id}
-                            className="option-ticket"
-                            data-testid="select"
-                            >
+                            {
+                                ticket.quantity <= 0 
+                                ?
+                                <span className="sold-ticket">Sold out</span>
+                                :
+                                <select 
+                                key={`${ticket.id}-select`}
+                                name="tickets"
+                                onChange={handleChange}
+                                id={ticket.id}
+                                className="option-ticket"
+                                data-testid="select"
+                                >
                                 {convertToArray(ticket.quantity).map(num => {
                                     return(
                                         <option 
@@ -58,11 +63,12 @@ export function FormTickets({ eventId, tickets, ticketsInfo, setTicketsInfo, cha
                                         value={`${num}-${ticket.id}`}
                                         data-testid="select-option"
                                         >
-                                            {ticket.quantity > 0 ? num : "sold out" }
+                                           {num}
                                         </option>
                                     )
                                 })}
                             </select>
+                            } 
                         </div>
                     </div>
                 )

@@ -9,8 +9,6 @@ export function Modal(props){
     const { changeQuantityTicket, eventsToSell, showModal, handleCloseModal } = props
   
     const [ticketsInfo, setTicketsInfo] = useState(
-      eventsToSell && eventsToSell.tickets
-      ?
       eventsToSell.tickets.map(ticket => {
             return(
                 {
@@ -23,26 +21,17 @@ export function Modal(props){
                 }
             )
         })
-      :
-      [{
-        id: "",
-        name: "",
-        price: "",
-        purchased_amount: 0,
-        fee_type: "",
-        fee: ""
-    }]
     )
    
     return(
         <dialog open={showModal} id="modal">
           <div className="container-modal">
           <div className="col-modal" id="form-section">
-                  <h1 id="event-name-modal">{eventsToSell ? eventsToSell.eventName.toUpperCase() : ""}</h1>
-                  <p id="event-date-modal">{eventsToSell ? formatedDatetime(eventsToSell.startDatetime) : ""}</p>
+                  <h1 id="event-name-modal">{eventsToSell.eventName.toUpperCase()}</h1>
+                  <p id="event-date-modal">{formatedDatetime(eventsToSell.startDatetime)}</p>
                   <FormTickets
-                  eventId={eventsToSell ? eventsToSell.id : ""}
-                  tickets={eventsToSell ? eventsToSell.tickets : []}
+                  eventId={eventsToSell.id}
+                  tickets={eventsToSell.tickets}
                   ticketsInfo={ticketsInfo}
                   setTicketsInfo={setTicketsInfo}
                   changeQuantityTicket={changeQuantityTicket}

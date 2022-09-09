@@ -72,3 +72,13 @@ button#form-btn[disabled]:hover{
     color: #989aa9;
     font-size: large;
 }
+
+span.sold-ticket{
+    color: #cd2a1e;
+    font-size: large;
+    font-weight: 700;
+}
+
+div.row-form {
+    width: 7rem;
+}
