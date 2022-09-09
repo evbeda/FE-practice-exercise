@@ -4,15 +4,9 @@ import { calculateFee } from "../../utils/utils";
 import "./OrderSummary.css"
 
 export function OrderSummary({ eventsToSell, ticketsInfo }){
-    console.log(ticketsInfo)
-    const [ticketsInformation, setTicketsInfo] = useState([]);
+
     let subTotal = 0;
     let fees = 0
-
-    useEffect(()=>{
-        setTicketsInfo(ticketsInfo)
-    },[ticketsInfo])
-
     
     return(
         <div class="order-container">
@@ -20,7 +14,7 @@ export function OrderSummary({ eventsToSell, ticketsInfo }){
                 <img src={eventsToSell.imageUrl} alt={eventsToSell.eventName} className="img-order"/>
             </div>
             <h4>Order summary</h4>
-            {ticketsInformation.map(ticket => {
+            {ticketsInfo.map(ticket => {
                 if(ticket.purchased_amount > 0){
                     subTotal += ticket.purchased_amount * ticket.price
                     fees += calculateFee(ticket.purchased_amount, ticket.price, ticket.fee, ticket.fee_type)
