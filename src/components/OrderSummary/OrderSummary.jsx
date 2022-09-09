@@ -9,34 +9,34 @@ export function OrderSummary({ eventsToSell, ticketsInfo }){
     let fees = 0
     
     return(
-        <div class="order-container">
+        <div className="order-container">
             <div>
-                <img src={eventsToSell.imageUrl} alt={eventsToSell.eventName} className="img-order"/>
+                <img src={eventsToSell.imageUrl} alt={eventsToSell.eventName} className="img-order" data-testid="img-event"/>
             </div>
-            <h4>Order summary</h4>
+            <h4 data-testid="order-sumary-h4">Order summary</h4>
             {ticketsInfo.map(ticket => {
                 if(ticket.purchased_amount > 0){
                     subTotal += ticket.purchased_amount * ticket.price
                     fees += calculateFee(ticket.purchased_amount, ticket.price, ticket.fee, ticket.fee_type)
                 return(
                     <div key={`${ticket.id}-div`} className="row-order">
-                        <p>{ticket.purchased_amount} x {ticket.name}</p>
-                        <p>$ {ticket.purchased_amount * ticket.price}</p>
+                        <p data-testid="ticket-quantity-name">{ticket.purchased_amount} x {ticket.name}</p>
+                        <p data-testid="price-purchased">$ {ticket.purchased_amount * ticket.price}</p>
                     </div>
                 )}
             })}
             
             <div className="row-order">
-                <p className="info-order">SubTotal</p>
-                <p className="info-order">$ {subTotal}</p>
+                <p className="info-order" data-testid="subtotal">SubTotal</p>
+                <p className="info-order" data-testid="subtotal-price">$ {subTotal}</p>
             </div>
             <div className="row-order">
-                <p className="info-order">Fees<i className="fa-solid fa-circle-info" id="fee-icon"></i></p>
-                <p className="info-order">$ {fees}</p>
+                <p className="info-order" data-testid="fee">Fees<i className="fa-solid fa-circle-info" id="fee-icon" data-testid="icon-fee-info"></i></p>
+                <p className="info-order" data-testid="fee-price">$ {fees}</p>
             </div>
             <div className="row-order">
-                <h3 class="total-order">Total</h3>
-                <p class="total-order">$ {(subTotal + fees).toFixed(2)}</p>
+                <h3 className="total-order" data-testid="total">Total</h3>
+                <p className="total-order" data-testid="total-price">$ {(subTotal + fees).toFixed(2)}</p>
             </div>
         </div>
         

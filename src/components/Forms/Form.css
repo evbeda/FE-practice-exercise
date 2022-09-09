@@ -50,10 +50,12 @@ form{
 
 button#form-btn[disabled]{
     background-color: #989aa9;
+    cursor: auto;
 }
 
 button#form-btn[disabled]:hover{
     background-color: #989aa9;
+    cursor: auto;
 }
 
 .ticket-name-price{
