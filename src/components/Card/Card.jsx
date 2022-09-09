@@ -36,7 +36,6 @@ export const Card = ({event, handleShowModal, setEventsToSell}) => {
   
   return (
     <article data-testid ='card-component'>
-
       <EventImage 
         className={`${thereAreTickets ? "cursorPointer" : ""}`}
         imageUrl={imageUrl} 

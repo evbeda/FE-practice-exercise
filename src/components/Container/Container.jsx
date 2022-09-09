@@ -24,7 +24,6 @@ export const Container = ({getAllEvents}) =>{
         })    
     }, [])
 
-
     return(
         <section className={showModal ? "blur" : ""}>
             <section className="containerHeader" data-testid="header">
